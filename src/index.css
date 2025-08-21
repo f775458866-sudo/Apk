@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+  }
+  
+  body {
+    font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-glass backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl;
+  }
+  
+  .glass-button {
+    @apply bg-glass backdrop-blur-md border border-white/30 rounded-xl px-6 py-3 text-white font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105;
+  }
+  
+  .glass-input {
+    @apply bg-glass backdrop-blur-md border border-white/30 rounded-xl px-4 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white/50 transition-all duration-300;
+  }
+  
+  .book-card {
+    @apply glass-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer;
+  }
+  
+  .category-card {
+    @apply glass-card p-8 text-center hover:scale-105 transition-all duration-500 cursor-pointer;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
