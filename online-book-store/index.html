@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الزجاجية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">مكتبتي</div>
+        <ul class="nav-links">
+            <li><a href="#" id="homeLink">الرئيسية</a></li>
+            <li><a href="#" id="cartLink">سلة المشتريات <span id="cartCount">0</span></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="categoriesSection" class="categories glass-container">
+            <!-- البطاقات ستُحقن هنا عبر JavaScript -->
+        </section>
+
+        <section id="booksSection" class="books glass-container hidden">
+            <button class="back-btn" id="backBtn">← عودة</button>
+            <h2 id="categoryTitle"></h2>
+            <div id="booksGrid" class="books-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
