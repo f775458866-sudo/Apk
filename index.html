@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>متجر الكتب | واجهة زجاجية</title>
+    <meta name="description" content="متجر كتب عربي بواجهة زجاجية رائعة مع تصنيفات وكتب وهمية وسلة مشتريات.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230077ff'/%3E%3Cpath d='M28 25h40a8 8 0 0 1 8 8v39a3 3 0 0 1-3 3H31a6 6 0 0 1-6-6V28a3 3 0 0 1 3-3Z' fill='white' opacity='.8'/%3E%3Cpath d='M32 28h30a6 6 0 0 1 6 6v33a3 3 0 0 1-3 3H35a6 6 0 0 1-6-6V31a3 3 0 0 1 3-3Z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-canvas"></div>
+    <header class="navbar glass">
+      <div class="navbar__brand" role="button" tabindex="0" id="brandLink" aria-label="العودة للصفحة الرئيسية">
+        <span class="logo">📚</span>
+        <span class="brand-text">مكتبة زجاجية</span>
+      </div>
+      <div class="navbar__search">
+        <input id="searchInput" class="input" type="search" placeholder="ابحث عن كتاب أو مؤلف..." aria-label="بحث" />
+      </div>
+      <nav class="navbar__actions">
+        <button id="checkoutNav" class="btn btn-ghost" aria-label="الدفع">الدفع</button>
+        <button id="cartButton" class="btn btn-primary" aria-label="فتح السلة">
+          <span>السلة</span>
+          <span id="cartCount" class="badge">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="app" class="container" aria-live="polite"></main>
+
+    <footer class="footer glass">
+      <div class="footer__content">
+        <span>© <span id="year"></span> مكتبة زجاجية — واجهة زجاجية عربية</span>
+        <a href="#/" class="link">الصفحة الرئيسية</a>
+      </div>
+    </footer>
+
+    <div id="cartOverlay" class="overlay hidden" role="button" aria-label="إغلاق السلة"></div>
+    <aside id="cartDrawer" class="cart-drawer glass hidden" aria-label="محتويات السلة" aria-live="polite">
+      <div class="cart-drawer__header">
+        <h2>السلة</h2>
+        <button id="closeCart" class="btn btn-ghost" aria-label="إغلاق">✕</button>
+      </div>
+      <div id="cartItems" class="cart-drawer__items"></div>
+      <div class="cart-drawer__footer">
+        <div class="cart-summary">
+          <span>الإجمالي</span>
+          <strong id="cartTotal">0 ر.س</strong>
+        </div>
+        <div class="cart-actions">
+          <button id="clearCart" class="btn btn-ghost">تفريغ السلة</button>
+          <button id="goCheckout" class="btn btn-primary">إتمام الشراء</button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+  </html>
