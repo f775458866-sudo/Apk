@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الكتب الإلكتروني</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-book"></i>
+                <h1>مكتبة الكنوز</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">الرئيسية</a>
+                <a href="#" class="nav-link">الأقسام</a>
+                <a href="#" class="nav-link">المؤلفون</a>
+                <a href="#" class="nav-link">العروض</a>
+                <a href="#" class="nav-link">اتصل بنا</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">اكتشف عالم المعرفة</h2>
+                <p class="hero-subtitle">مجموعة واسعة من الكتب العربية والعالمية في جميع المجالات</p>
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن كتابك المفضل...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">أقسام الكتب</h2>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Collection View -->
+    <section class="books-collection hidden" id="booksCollection">
+        <div class="container">
+            <div class="collection-header">
+                <button class="back-btn" id="backBtn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للأقسام
+                </button>
+                <h2 class="collection-title" id="collectionTitle"></h2>
+            </div>
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Details Modal -->
+    <div class="modal-overlay hidden" id="bookModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="book-details" id="bookDetails">
+                <!-- Book details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مكتبة الكنوز</h3>
+                    <p>وجهتك المثالية لاكتشاف أفضل الكتب العربية والعالمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#">عن المكتبة</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">الدعم الفني</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مكتبة الكنوز. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
